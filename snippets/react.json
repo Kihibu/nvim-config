@@ -1,0 +1,14 @@
+{
+    "react-native main": {
+        "prefix": "rn-main",
+        "body": [
+        "import React from \"react\";\n",
+        "import { StyleSheet, StyleProp, ViewStyle, View } from \"react-native\";\n",
+        "const styles = StyleSheet.create({\n  root: {}\n});\n",
+        "interface Props {\n  readonly style?: StyleProp<ViewStyle>;\n}\n",
+        "export function ${1:${TM_FILENAME_BASE}}({ style }: Props) {",
+        "  return <View style={[styles.root, style]} />;\n};\n"
+      ]
+    }
+}
+

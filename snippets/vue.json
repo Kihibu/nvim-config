@@ -1,0 +1,6 @@
+{
+    "vue3 typescript composition api": {
+        "prefix": "vue3",
+        "body": ["<script setup lang=\"ts\">\n</script>\n\n<template>\n<div>\n</div>\n</template>\n\n<style scoped>\n</style>"]
+    }
+}
