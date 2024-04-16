@@ -59,10 +59,27 @@ return {
           "vue",
         },
       }
-      -- require("typescript").setup({})
-      -- require("lspconfig").eslint.setup({})
-      require'lspconfig'.volar.setup{
-        settings = {}
+
+      require("typescript").setup({})
+      require("lspconfig").eslint.setup({})
+      -- require'lspconfig'.volar.setup{
+      --   settings = {}
+      -- }
+      require'lspconfig'.pyright.setup{
+        filetypes = {
+          "python",
+        },
+        settings = {
+          python = {
+            analysis = {
+              ignore = { "**/*.xsh" },
+              typeCheckingMode = "standard",
+              autoSearchPaths = true,
+              useLibraryCodeForTypes = true,
+              diagnosticMode = "openFilesOnly",
+            },
+          },
+        },
       }
       require("clangd_extensions").setup({
         server = {
