@@ -91,6 +91,14 @@ return {
     version = "v2.*",
   },
   {
+    "voldikss/vim-floaterm",
+    lazy = false,
+    config = function()
+      vim.keymap.set("n", "<Space>tt", [[:FloatermToggle!<CR>]], { noremap = true, silent = true })
+      vim.g.floaterm_shell = "/opt/homebrew/bin/xonsh"
+    end,
+  },
+  {
     "ptzz/lf.vim",
     dependencies = "voldikss/vim-floaterm",
     lazy = false,

@@ -43,6 +43,7 @@ return {
       local client_capabilities = vim.lsp.protocol.make_client_capabilities()
       client_capabilities = require("cmp_nvim_lsp").default_capabilities(client_capabilities)
       client_capabilities.offsetEncoding = { "utf-16" }
+
       require'lspconfig'.tsserver.setup{
         init_options = {
           plugins = {
@@ -81,6 +82,7 @@ return {
           },
         },
       }
+
       require("clangd_extensions").setup({
         server = {
           -- on_attach = prefer_null_ls_fmt,
@@ -152,13 +154,5 @@ return {
         vim.api.nvim_win_set_config(win, { zindex = 100 })
       end,
     },
-    init = function()
-      -- when noice is not enabled, install notify on VeryLazy
-      if not LazyVim.has("noice.nvim") then
-        LazyVim.on_very_lazy(function()
-          vim.notify = require("notify")
-        end)
-      end
-    end,
   },
 }

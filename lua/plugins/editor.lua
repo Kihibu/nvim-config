@@ -7,8 +7,7 @@ return {
     cmd = "Telescope",
     version = false, -- telescope did only one release, so use HEAD for now
     keys = {
-      { "<leader>sf", Util.telescope("files"), desc = "Search Files (root dir)" },
-      { "<leader>sF", Util.telescope("files", { cwd = false }), desc = "Search Files (cwd)" },
+      { "<leader>sf", require("telescope.builtin").find_files, desc = "Search Files (root dir)" },
       { "<leader>sb", ":Telescope buffers<CR>", desc = "Search Files n buffer"},
     },
     init = function()
