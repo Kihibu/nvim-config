@@ -88,17 +88,6 @@ return {
     },
   },
   {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    branch = "canary",
-    dependencies = {
-      { "zbirenbaum/copilot.lua" },
-      { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
-    },
-    opts = {
-      debug = false, -- Enable debugging
-    },
-  },
-  {
     "tpope/vim-fugitive",
     init = function()
       vim.keymap.set("n", "<leader>go", [[:G<CR>]], {

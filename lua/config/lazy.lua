@@ -43,7 +43,12 @@ require("lazy").setup({
       },
     },
   },
+  dev = {
+    path = "~/dev/sw/nvim_plugins",
+    fallback = false, -- Fallback to git when local plugin doesn't exist
+  },
 })
+
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
   border = "single",
 })

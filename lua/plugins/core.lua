@@ -79,7 +79,6 @@ return {
       vim.keymap.del({ "x", "o" }, "X")
     end,
   },
-
   {
     "phaazon/hop.nvim",
     branch = "v2",
